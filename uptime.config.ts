@@ -28,6 +28,17 @@ const workerConfig: WorkerConfig = {
       timeout: 10000,
       checkProxy: 'worker://enam',
     },
+    // HTTP Monitor - Request
+    {
+      id: 'request_monitor',
+      name: 'Request Monitor',
+      method: 'GET',
+      target: 'https://request.flippn.net/api/v1/status',
+      statusPageLink: 'https://request.flippn.net',
+      expectedCodes: [200],
+      timeout: 10000,
+      checkProxy: 'worker://enam',
+    },
   ],
 }
 
