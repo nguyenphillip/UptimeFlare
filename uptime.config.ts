@@ -26,6 +26,7 @@ const workerConfig: WorkerConfig = {
       target: 'https://watch.flippn.net/identity',
       expectedCodes: [200],
       timeout: 10000,
+      checkProxy: 'worker://enam',
     },
   ],
 }
