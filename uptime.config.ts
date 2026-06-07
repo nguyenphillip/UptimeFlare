@@ -28,6 +28,18 @@ const workerConfig: WorkerConfig = {
       timeout: 10000,
       checkProxy: 'worker://enam',
     },
+    // HTTP Monitor - Image
+    {
+      id: 'image_monitor',
+      name: 'Immich Monitor',
+      method: 'GET',
+      target: 'https://image.flippn.net/api/server/ping',
+      statusPageLink: 'https://image.flippn.net',
+      expectedCodes: [200],
+      responseKeyword: 'pong',
+      timeout: 10000,
+      checkProxy: 'worker://enam',
+    },
     // HTTP Monitor - Request
     {
       id: 'request_monitor',
